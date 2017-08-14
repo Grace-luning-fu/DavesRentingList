@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+
+
+<table>
+    <caption><h2>Renting available</h2></caption>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Rules</th>
+        <th>Cable</th>
+        <th>Bathroom</th>
+        <th>Rented or not</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="rent : ${avail}">
+        <td th:text="${rent.id}"></td>
+        <td th:text="${rent.description}"></td>
+        <td th:text="${rent.rules}"></td>
+        <td th:text="${rent.cable}"></td>
+        <td th:text="${rent.bathroom}"></td>
+        <td th:text="${rent.isRented}"></td>
+
+    </tr>
+    </tbody>
+</table>
+
+
+<table>
+    <caption><h2>Already rented out</h2></caption>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Rules</th>
+        <th>Cable</th>
+        <th>Bathroom</th>
+        <th>Rented or not</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="rent : ${notavail}">
+        <td th:text="${rent.id}"></td>
+        <td th:text="${rent.description}"></td>
+        <td th:text="${rent.rules}"></td>
+        <td th:text="${rent.cable}"></td>
+        <td th:text="${rent.bathroom}"></td>
+        <td th:text="${rent.isRented}"></td>
+
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>
