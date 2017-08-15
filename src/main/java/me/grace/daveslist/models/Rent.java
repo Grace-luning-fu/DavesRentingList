@@ -34,7 +34,7 @@ public class Rent {
 
 
 
-    public void setRentinfo(String description, String rules, String cable, Boolean bathroom, Boolean isRented)
+    public void setRentinfo(String description, String rules, String cable, Boolean bathroom, Boolean isrented)
     {
         this.description = description;
         this.rules = rules;

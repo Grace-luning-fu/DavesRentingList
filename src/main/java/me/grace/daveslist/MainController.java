@@ -48,19 +48,19 @@ public class MainController {
         Iterable<Rent> loadlist;
         ArrayList<Rent> toadd = new ArrayList<>();
         Rent newRent1 = new Rent();
-        newRent1.setRentinfo("New on Hazel street", "no cat", "none",
+        newRent1.setRentinfo("New on Hazel street", "no dog", "none",
                 true, true);
 
         Rent newRent2 = new Rent();
-        newRent2.setRentinfo("New on Hazel street", "no cat", "none",
+        newRent2.setRentinfo("New on Cherry street", "no cat", "none",
                 true, false);
 
         Rent newRent3 = new Rent();
-        newRent3.setRentinfo("New on Hazel street", "no dog", "none",
+        newRent3.setRentinfo("New on Orange street", "no dog", "none",
                 false, true);
 
         Rent newRent4 = new Rent();
-        newRent4.setRentinfo("New on Hazel street", "no cat", "none",
+        newRent4.setRentinfo("New on Apple street", "no cat", "none",
                 true, false);
 
         toadd.add(newRent1);
