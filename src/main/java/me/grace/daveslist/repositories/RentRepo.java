@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface RentRepo extends CrudRepository<Rent,Long> {
 
-    Iterable<Rent> findAllByIsRented(String partialString);
+    Iterable<Rent> findAllByIsrented(Boolean partialBoolean);
 }

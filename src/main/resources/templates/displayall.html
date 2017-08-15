@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<p>all in the list</p>
+<th:block th:each="rent:${allrent}">
+<p th:text="'Description: '+ ${rent.description}" />
+<p th:text="'Rules: '+ ${rent.rules}" />
+<p th:text="'Cable: '+ ${rent.cable}" />
+<p th:text="'Bathroom: '+ ${rent.bathroom}" />
+<p th:text="'?Rented: '+ ${rent.isrented}" />
+
+</th:block>
+</body>
+</html>

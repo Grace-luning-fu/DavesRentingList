@@ -21,15 +21,16 @@
     </thead>
 
     <tbody>
-    <tr th:each="rent : ${avail}">
+    <th:block th:each="rent : ${avail}">
+        <tr>
         <td th:text="${rent.id}"></td>
         <td th:text="${rent.description}"></td>
         <td th:text="${rent.rules}"></td>
         <td th:text="${rent.cable}"></td>
         <td th:text="${rent.bathroom}"></td>
-        <td th:text="${rent.isRented}"></td>
-
-    </tr>
+        <td th:text="${rent.isrented}"></td>
+        </tr>
+    </th:block>
     </tbody>
 </table>
 
@@ -48,15 +49,16 @@
     </thead>
 
     <tbody>
-    <tr th:each="rent : ${notavail}">
+    <th:block th:each="rent : ${notavail}">
+        <tr>
         <td th:text="${rent.id}"></td>
         <td th:text="${rent.description}"></td>
         <td th:text="${rent.rules}"></td>
         <td th:text="${rent.cable}"></td>
         <td th:text="${rent.bathroom}"></td>
-        <td th:text="${rent.isRented}"></td>
-
-    </tr>
+        <td th:text="${rent.isrented}"></td>
+        </tr>
+    </th:block>
     </tbody>
 </table>
 

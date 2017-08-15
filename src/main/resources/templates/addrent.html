@@ -7,11 +7,11 @@
 <body>
 <h2>Add a list to the database</h2>
 <form action="#" th:action="@{/addrent}" th:object="${newRent}" method="post">
-    <p>Enter the description : <input type="text" th:field="*description" /></p>
-    <p>Enter the rules : <input type="text" th:field="*rules" /></p>
-    <p>Enter the cable info : <input type="text" th:field="*cable" /></p>
-    <p>Enter the bathroom info : <input type="text" th:field="*bathroom" /></p>
-    <p>Enter rented or not: <input type="text" th:field="*isRented" /></p>
+    <p>Enter the description : <input type="text" th:field="*{description}" /></p>
+    <p>Enter the rules : <input type="text" th:field="*{rules}" /></p>
+    <p>Enter the cable info : <input type="text" th:field="*{cable}" /></p>
+    <p>Enter the bathroom info : <input type="text" th:field="*{bathroom}" /></p>
+    <p>Enter rented or not: <input type="text" th:field="*{isrented}" /></p>
 
     <p><input type="submit" value="Add Rent info" /> <input type="reset" value="Reset" /></p>
 

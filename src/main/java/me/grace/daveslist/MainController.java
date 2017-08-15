@@ -53,15 +53,15 @@ public class MainController {
 
         Rent newRent2 = new Rent();
         newRent2.setRentinfo("New on Hazel street", "no cat", "none",
-                true, true);
+                true, false);
 
         Rent newRent3 = new Rent();
-        newRent3.setRentinfo("New on Hazel street", "no cat", "none",
-                true, true);
+        newRent3.setRentinfo("New on Hazel street", "no dog", "none",
+                false, true);
 
         Rent newRent4 = new Rent();
         newRent4.setRentinfo("New on Hazel street", "no cat", "none",
-                true, true);
+                true, false);
 
         toadd.add(newRent1);
         toadd.add(newRent2);
@@ -74,12 +74,20 @@ public class MainController {
         return "loadconfirm";
     }
 
+    @GetMapping("/displayall")
+    public String displayall(Model model)
+    {
+        Iterable<Rent> all=rentRepo.findAll();
+        model.addAttribute("allrent", all);
+        return "displayall";
+    }
+
     @GetMapping("/rentornot")
     public String search(Model model)
     {
-        Iterable<Rent> available = rentRepo.findAllByIsRented("false");
+        Iterable<Rent> available = rentRepo.findAllByisrented(false);
         model.addAttribute("avail", available);
-        Iterable<Rent> notavailable = rentRepo.findAllByIsRented("true");
+        Iterable<Rent> notavailable = rentRepo.findAllByisrented(true);
         model.addAttribute("notavail", notavailable);
 
         return "rentornot";

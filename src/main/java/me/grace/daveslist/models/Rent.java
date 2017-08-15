@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Rent {
@@ -12,11 +14,23 @@ public class Rent {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @NotNull
+    @Size(min=2, max=30)
     private String description;
     private String rules;
     private String cable;
     private Boolean bathroom;
-    private Boolean isRented;
+    //when changed to camel case, have problem when generate setter and getter
+    private Boolean isrented;
+
+//    private Boolean isRented;
+//    public Boolean getRented() {
+//        return isRented;
+//    }
+//    public void setRented(Boolean rented) {
+//        isRented = rented;
+//    }
 
 
 
@@ -26,7 +40,7 @@ public class Rent {
         this.rules = rules;
         this.cable= cable;
         this.bathroom = bathroom;
-        this.isRented = isRented;
+        this.isrented = isrented;
     }
 
     public Long getId() {
@@ -70,12 +84,14 @@ public class Rent {
         this.bathroom = bathroom;
     }
 
-    public Boolean getRented() {
-        return isRented;
+    public Boolean getIsrented() {
+        return isrented;
     }
 
-    public void setRented(Boolean rented) {
-        this.isRented = isRented;
+    public void setIsrented(Boolean isrented) {
+        this.isrented = isrented;
     }
+
+
 
 }
