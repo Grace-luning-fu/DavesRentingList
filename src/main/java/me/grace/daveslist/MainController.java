@@ -85,9 +85,9 @@ public class MainController {
     @GetMapping("/rentornot")
     public String search(Model model)
     {
-        Iterable<Rent> available = rentRepo.findAllByisrented(false);
+        Iterable<Rent> available = rentRepo.findAllByIsrented(false);
         model.addAttribute("avail", available);
-        Iterable<Rent> notavailable = rentRepo.findAllByisrented(true);
+        Iterable<Rent> notavailable = rentRepo.findAllByIsrented(true);
         model.addAttribute("notavail", notavailable);
 
         return "rentornot";
