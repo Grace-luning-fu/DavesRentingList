@@ -7,15 +7,40 @@
 <body>
 <div th:replace="base :: navlinks"></div>
 
-<h2>All renting in the list</h2>
-<th:block th:each="rent:${allrent}">
-<p th:text="'Description: '+ ${rent.description}" />
-<p th:text="'Rules: '+ ${rent.rules}" />
-<p th:text="'Cable: '+ ${rent.cable}" />
-<p th:text="'Bathroom: '+ ${rent.bathroom}" />
-<p th:text="'?Rented: '+ ${rent.isrented}" />
 
-</th:block>
+<table>
+    <caption><h2>All renting in the list</h2></caption>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Rules</th>
+        <th>Cable</th>
+        <th>Bathroom</th>
+        <th>?Rented</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <th:block th:each="rent:${allrent}">
+        <tr>
+            <td th:text="${rent.id}"/>
+            <td th:text="${rent.description}" />
+            <td th:text="${rent.rules}" />
+            <td th:text="${rent.cable}"/>
+            <td th:text="${rent.bathroom}" />
+            <td th:text="${rent.isrented}" />
+        </tr>
+    </th:block>
+    </tbody>
+
+</table>
+
+
+
+<br/>
+<br/>
+<br/>
 
 <div th:replace="base :: footer"></div>
 
