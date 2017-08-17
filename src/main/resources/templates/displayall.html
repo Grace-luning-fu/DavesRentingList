@@ -5,7 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-<p>all in the list</p>
+<div th:replace="base :: navlinks"></div>
+
+<h2>All renting in the list</h2>
 <th:block th:each="rent:${allrent}">
 <p th:text="'Description: '+ ${rent.description}" />
 <p th:text="'Rules: '+ ${rent.rules}" />
@@ -14,5 +16,8 @@
 <p th:text="'?Rented: '+ ${rent.isrented}" />
 
 </th:block>
+
+<div th:replace="base :: footer"></div>
+
 </body>
 </html>

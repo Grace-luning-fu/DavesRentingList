@@ -5,13 +5,24 @@
     <title>Title</title>
 </head>
 <body>
+
+
+
 <h2>Result</h2>
-<p th:text="'Id: '+ ${newRent.id}"/></p>
-<p th:text="'Description: '+ ${newRent.description}" /></p>
-<p th:text="'Rules: '+ ${newRent.rules}" /></p>
-<p th:text="'Cable: '+ ${newRent.cable}" /></p>
-<p th:text="'Bathroom: '+ ${newRent.bathroom}" /></p>
-<p th:text="'?Rented: '+ ${newRent.isrented}" /></p>
+<p th:number="'Id: '+ ${newRent.id}"/>
+<p th:text="'Description: '+ ${newRent.description}" />
+<p th:text="'Rules: '+ ${newRent.rules}" />
+<p th:text="'Cable: '+ ${newRent.cable}" />
+<p th:text="'Bathroom: '+ ${newRent.bathroom}" />
+<p th:text="'?Rented: '+ ${newRent.isrented}" />
+
+<a href="/addrent">Add another renting</a><br/>
+<a href="/displayall">See all renting</a><br/>
+<a href="/rentornot">See available renting</a>
+
+
+
+<div th:replace="base :: footer"></div>
 
 </body>
 </html>

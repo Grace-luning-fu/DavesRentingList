@@ -5,7 +5,11 @@
     <title>Title</title>
 </head>
 <body>
+
+<div th:replace="base :: navlinks"></div>
+
 <h2>Add a list to the database</h2>
+
 <form action="#" th:action="@{/addrent}" th:object="${newRent}" method="post">
     <p>Enter the description : <input type="text" th:field="*{description}" /></p>
     <p>Enter the rules : <input type="text" th:field="*{rules}" /></p>
@@ -16,5 +20,8 @@
     <p><input type="submit" value="Add Rent info" /> <input type="reset" value="Reset" /></p>
 
 </form>
+
+<div th:replace="base :: footer"></div>
+
 </body>
 </html>
